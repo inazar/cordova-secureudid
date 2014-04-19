@@ -9,8 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Cordova/CDVPlugin.h>
 
-@interface SecureDeviceIdentifier : CDVPlugin {
-}
+@interface SecureDeviceIdentifier : CDVPlugin
 
 #pragma mark - Properties
 
