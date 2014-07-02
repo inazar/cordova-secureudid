@@ -6,18 +6,20 @@
 
 	<name>SecureDeviceIdentifier</name>
 
-    <js-module src="www/SecureDeviceIdentifier.js" name="SecureDeviceIdentifier">
-        <clobbers target="SecureDeviceIdentifier" />
-    </js-module>
-
     <!-- ios -->
     <platform name="ios">
+        <js-module src="www/SecureDeviceIdentifier.js" name="SecureDeviceIdentifier">
+            <clobbers target="SecureDeviceIdentifier" />
+        </js-module>
+
         <config-file target="config.xml" parent="/*">
             <feature name="SecureDeviceIdentifier">
                 <param name="ios-package" value="SecureDeviceIdentifier"/>
             </feature>
         </config-file>
 
+        <header-file src="src/ios/SecureUDID/SecureUDID.h" />
+        <source-file src="src/ios/SecureUDID/SecureUDID.m" />
         <header-file src="src/ios/SecureDeviceIdentifier.h" />
         <source-file src="src/ios/SecureDeviceIdentifier.m" />
     </platform>
